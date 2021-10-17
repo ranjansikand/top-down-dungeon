@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: destroyEffect
       value: 
       objectReference: {fileID: 2680506323649863867, guid: d882450e78bc7f94bb33f51991055597, type: 3}
+    - target: {fileID: -5246531377810464683, guid: 45d9c4510b3cf344393c6b8aaa2619c3, type: 3}
+      propertyPath: useDestroyEffect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 609870891827023885, guid: 45d9c4510b3cf344393c6b8aaa2619c3, type: 3}
       propertyPath: m_Name
       value: Cleric_Spell_Light Variant

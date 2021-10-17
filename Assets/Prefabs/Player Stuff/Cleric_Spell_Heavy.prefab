@@ -132,7 +132,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  explosion: {fileID: 6646383910957335551, guid: 4d01c070cd95d7c48aaa4a71161ac47e, type: 3}
+  explosion: {fileID: 0}
 --- !u!1001 &2848715370787071804
 PrefabInstance:
   m_ObjectHideFlags: 0

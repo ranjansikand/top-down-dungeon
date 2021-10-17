@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637677769140141433
-    m_Hash: 2273768333
+      ticks: 637700308758544712
+    m_Hash: 1311428780
   m_LockFileStatus:
     m_FilePath: C:/Users/ranja/Desktop/Games/TDS_WithSprites/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637677769147454467
-    m_Hash: 4002666331
+      ticks: 637700308767040315
+    m_Hash: 3013420537
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -98,21 +98,25 @@ m_PackageAssets:
         - 5.0.5
         - 5.0.6
         - 5.0.7
+        - 5.0.8
         - 6.0.0-pre.1
         - 6.0.0-pre.2
         - 6.0.1
         - 6.0.3
         - 6.0.4
         - 6.0.5
+        - 6.0.7
         - 7.0.0-pre.2
         - 7.0.0-pre.3
         - 7.0.0
+        - 7.0.1
         compatible:
         - 5.0.4
         - 5.0.5
         - 5.0.6
         - 5.0.7
-        verified: 5.0.7
+        - 5.0.8
+        verified: 5.0.8
       dependencies:
       - name: com.unity.2d.common
         version: 4.0.3
@@ -140,7 +144,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.mathematics
-        version: 1.1.0
+        version: 1.2.1
       - name: com.unity.modules.animation
         version: 1.0.0
       keywords:
@@ -165,6 +169,100 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
+        path: 
+    - packageId: com.unity.animation.rigging@1.0.3
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.3
+      source: 1
+      resolvedPath: C:\Users\ranja\Desktop\Games\TDS_WithSprites\Library\PackageCache\com.unity.animation.rigging@1.0.3
+      assetPath: Packages/com.unity.animation.rigging
+      name: com.unity.animation.rigging
+      displayName: Animation Rigging
+      author:
+        name: 
+        email: 
+        url: 
+      category: Animation
+      type: 
+      description: Animation Rigging toolkit using Unity's Animation C# Jobs
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.2-preview
+        - 0.1.4-preview
+        - 0.2.1-preview
+        - 0.2.2-preview
+        - 0.2.3-preview
+        - 0.2.5-preview
+        - 0.2.6-preview
+        - 0.2.7-preview
+        - 0.3.2-preview
+        - 0.3.3-preview
+        - 0.3.4-preview
+        - 1.0.2
+        - 1.0.3
+        - 1.1.0
+        - 1.1.1
+        compatible:
+        - 0.1.2-preview
+        - 0.1.4-preview
+        - 0.2.1-preview
+        - 0.2.2-preview
+        - 0.2.3-preview
+        - 0.2.5-preview
+        - 0.2.6-preview
+        - 0.2.7-preview
+        - 0.3.2-preview
+        - 0.3.3-preview
+        - 0.3.4-preview
+        - 1.0.2
+        - 1.0.3
+        - 1.1.0
+        - 1.1.1
+        verified: 1.0.3
+      dependencies:
+      - name: com.unity.burst
+        version: 1.3.4
+      - name: com.unity.test-framework
+        version: 1.1.14
+      resolvedDependencies:
+      - name: com.unity.burst
+        version: 1.3.4
+      - name: com.unity.mathematics
+        version: 1.2.1
+      - name: com.unity.test-framework
+        version: 1.1.22
+      - name: com.unity.ext.nunit
+        version: 1.0.6
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      keywords:
+      - Animation
+      - Rigging
+      - Constraints
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637338778170000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.animation.rigging.git
+        revision: 536ae6adeb6f1066ee89b6938f6ba5828ea92e5f
         path: 
     - packageId: com.unity.collab-proxy@1.3.9
       testable: 0
@@ -211,6 +309,10 @@ m_PackageAssets:
         - 1.7.1
         - 1.8.0
         - 1.9.0
+        - 1.10.2
+        - 1.11.2
+        - 1.12.5
+        - 1.13.5
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -227,6 +329,8 @@ m_PackageAssets:
         - 1.5.7
         - 1.6.0
         - 1.8.0
+        - 1.10.2
+        - 1.12.5
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -535,6 +639,95 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+        path: 
+    - packageId: com.unity.postprocessing@3.0.3
+      testable: 0
+      isDirectDependency: 1
+      version: 3.0.3
+      source: 1
+      resolvedPath: C:\Users\ranja\Desktop\Games\TDS_WithSprites\Library\PackageCache\com.unity.postprocessing@3.0.3
+      assetPath: Packages/com.unity.postprocessing
+      name: com.unity.postprocessing
+      displayName: Post Processing
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The post-processing stack (v2) comes with a collection of effects
+        and image filters you can apply to your cameras to improve the visuals of
+        your games.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.7
+        - 0.1.8
+        - 2.0.0-beta
+        - 2.0.1-beta
+        - 2.0.2-preview
+        - 2.0.3-preview
+        - 2.0.5-preview
+        - 2.0.7-preview
+        - 2.0.8-preview
+        - 2.0.9-preview
+        - 2.0.10-preview
+        - 2.0.11-preview
+        - 2.0.12-preview
+        - 2.0.13-preview
+        - 2.0.14-preview
+        - 2.0.15-preview
+        - 2.0.16-preview
+        - 2.0.17-preview
+        - 2.1.0
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3
+        - 2.1.4
+        - 2.1.5
+        - 2.1.6
+        - 2.1.7
+        - 2.2.1
+        - 2.2.2
+        - 2.3.0
+        - 3.0.1
+        - 3.0.3
+        - 3.1.0
+        - 3.1.1
+        compatible:
+        - 2.3.0
+        - 3.0.1
+        - 3.0.3
+        - 3.1.0
+        - 3.1.1
+        verified: 3.0.3
+      dependencies:
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637496860130000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 267c9ab2b6aae8e296d78e27ca27af29b3bc7606
         path: 
     - packageId: com.unity.test-framework@1.1.22
       testable: 0
@@ -2814,6 +3007,233 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
         path: 
+    - packageId: com.unity.burst@1.3.4
+      testable: 0
+      isDirectDependency: 0
+      version: 1.3.4
+      source: 1
+      resolvedPath: C:\Users\ranja\Desktop\Games\TDS_WithSprites\Library\PackageCache\com.unity.burst@1.3.4
+      assetPath: Packages/com.unity.burst
+      name: com.unity.burst
+      displayName: Burst
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Burst is a compiler that translates from IL/.NET bytecode to highly
+        optimized native code using LLVM.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.2.4-preview.5
+        - 0.2.4-preview.7
+        - 0.2.4-preview.11
+        - 0.2.4-preview.12
+        - 0.2.4-preview.13
+        - 0.2.4-preview.14
+        - 0.2.4-preview.15
+        - 0.2.4-preview.16
+        - 0.2.4-preview.17
+        - 0.2.4-preview.18
+        - 0.2.4-preview.19
+        - 0.2.4-preview.20
+        - 0.2.4-preview.21
+        - 0.2.4-preview.22
+        - 0.2.4-preview.23
+        - 0.2.4-preview.24
+        - 0.2.4-preview.25
+        - 0.2.4-preview.30
+        - 0.2.4-preview.31
+        - 0.2.4-preview.33
+        - 0.2.4-preview.34
+        - 0.2.4-preview.37
+        - 0.2.4-preview.41
+        - 0.2.4-preview.45
+        - 0.2.4-preview.48
+        - 0.2.4-preview.50
+        - 1.1.0-preview.2
+        - 1.1.0-preview.3
+        - 1.1.0-preview.4
+        - 1.1.1
+        - 1.1.2
+        - 1.1.3-preview.3
+        - 1.2.0-preview.1
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.8
+        - 1.2.0-preview.9
+        - 1.2.0-preview.10
+        - 1.2.0-preview.11
+        - 1.2.0-preview.12
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0-preview.3
+        - 1.3.0-preview.4
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0-preview.8
+        - 1.3.0-preview.9
+        - 1.3.0-preview.10
+        - 1.3.0-preview.11
+        - 1.3.0-preview.12
+        - 1.3.0-preview.13
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.9
+        - 1.4.0-pre.1
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.1-pre.1
+        - 1.4.1-pre.2
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4-preview.1
+        - 1.4.4-preview.2
+        - 1.4.4
+        - 1.4.5
+        - 1.4.6
+        - 1.4.7
+        - 1.4.8
+        - 1.4.9
+        - 1.4.11
+        - 1.5.0-pre.3
+        - 1.5.0-pre.4
+        - 1.5.0-pre.5
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6-preview.1
+        - 1.5.6
+        - 1.6.0-pre.2
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0
+        - 1.6.1
+        compatible:
+        - 1.1.1
+        - 1.1.2
+        - 1.1.3-preview.3
+        - 1.2.0-preview.1
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.8
+        - 1.2.0-preview.9
+        - 1.2.0-preview.10
+        - 1.2.0-preview.11
+        - 1.2.0-preview.12
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0-preview.3
+        - 1.3.0-preview.4
+        - 1.3.0-preview.5
+        - 1.3.0-preview.6
+        - 1.3.0-preview.7
+        - 1.3.0-preview.8
+        - 1.3.0-preview.9
+        - 1.3.0-preview.10
+        - 1.3.0-preview.11
+        - 1.3.0-preview.12
+        - 1.3.0-preview.13
+        - 1.3.0
+        - 1.3.1
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.9
+        - 1.4.0-pre.1
+        - 1.4.0-preview.1
+        - 1.4.0-preview.2
+        - 1.4.0-preview.3
+        - 1.4.0-preview.4
+        - 1.4.0-preview.5
+        - 1.4.1-pre.1
+        - 1.4.1-pre.2
+        - 1.4.1
+        - 1.4.2
+        - 1.4.3
+        - 1.4.4-preview.1
+        - 1.4.4-preview.2
+        - 1.4.4
+        - 1.4.5
+        - 1.4.6
+        - 1.4.7
+        - 1.4.8
+        - 1.4.9
+        - 1.4.11
+        - 1.5.0-pre.3
+        - 1.5.0-pre.4
+        - 1.5.0-pre.5
+        - 1.5.0
+        - 1.5.1
+        - 1.5.2
+        - 1.5.3
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6-preview.1
+        - 1.5.6
+        - 1.6.0-pre.2
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        - 1.6.0
+        - 1.6.1
+        verified: 1.4.11
+      dependencies:
+      - name: com.unity.mathematics
+        version: 1.2.1
+      resolvedDependencies:
+      - name: com.unity.mathematics
+        version: 1.2.1
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637324087250000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/burst.git
+        revision: 142be34480be15f14fbf073c350fb08958d80e59
+        path: 
     - packageId: com.unity.2d.common@4.0.3
       testable: 0
       isDirectDependency: 0
@@ -2857,6 +3277,7 @@ m_PackageAssets:
         - 6.0.0-pre.2
         - 6.0.0-pre.3
         - 6.0.0-pre.4
+        - 6.0.0
         compatible:
         - 4.0.2
         - 4.0.3
@@ -2900,81 +3321,6 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: c97def465b1932276762fc13f4cfee58da99d5e9
-        path: 
-    - packageId: com.unity.mathematics@1.1.0
-      testable: 0
-      isDirectDependency: 0
-      version: 1.1.0
-      source: 1
-      resolvedPath: C:\Users\ranja\Desktop\Games\TDS_WithSprites\Library\PackageCache\com.unity.mathematics@1.1.0
-      assetPath: Packages/com.unity.mathematics
-      name: com.unity.mathematics
-      displayName: Mathematics
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Unity's C# SIMD math library providing vector types and math functions
-        with a shader like syntax.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.0.12-preview.2
-        - 0.0.12-preview.5
-        - 0.0.12-preview.8
-        - 0.0.12-preview.10
-        - 0.0.12-preview.11
-        - 0.0.12-preview.13
-        - 0.0.12-preview.17
-        - 0.0.12-preview.19
-        - 0.0.12-preview.20
-        - 1.0.0-preview.1
-        - 1.0.1
-        - 1.1.0-preview.1
-        - 1.1.0
-        - 1.2.1
-        compatible:
-        - 0.0.12-preview.2
-        - 0.0.12-preview.5
-        - 0.0.12-preview.8
-        - 0.0.12-preview.10
-        - 0.0.12-preview.11
-        - 0.0.12-preview.13
-        - 0.0.12-preview.17
-        - 0.0.12-preview.19
-        - 0.0.12-preview.20
-        - 1.0.0-preview.1
-        - 1.0.1
-        - 1.1.0-preview.1
-        - 1.1.0
-        - 1.2.1
-        verified: 1.2.1
-      dependencies: []
-      resolvedDependencies: []
-      keywords:
-      - unity
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 636984649280000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: git@github.com:Unity-Technologies/Unity.Mathematics.git
-        revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
         path: 
     - packageId: com.unity.2d.sprite@1.0.0
       testable: 0
@@ -3026,6 +3372,83 @@ m_PackageAssets:
         type: 
         url: 
         revision: 
+        path: 
+    - packageId: com.unity.mathematics@1.2.1
+      testable: 0
+      isDirectDependency: 0
+      version: 1.2.1
+      source: 1
+      resolvedPath: C:\Users\ranja\Desktop\Games\TDS_WithSprites\Library\PackageCache\com.unity.mathematics@1.2.1
+      assetPath: Packages/com.unity.mathematics
+      name: com.unity.mathematics
+      displayName: Mathematics
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Unity's C# SIMD math library providing vector types and math functions
+        with a shader like syntax.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0
+        - 1.2.1
+        - 1.2.4
+        compatible:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0
+        - 1.2.1
+        - 1.2.4
+        verified: 1.2.4
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - unity
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637324062630000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Unity.Mathematics.git
+        revision: 71412d94b7a0b0fdbb3195a5e6559bf6a761e91a
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []

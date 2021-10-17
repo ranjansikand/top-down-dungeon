@@ -85,7 +85,7 @@ public class EnemyScript : MonoBehaviour
                     if (detectedTrigger != "NA") anim.SetTrigger(detectedTrigger);
                 }
             }
-            Debug.Assert(target != null, "Targeted non-enemy!", targetsBuffer[0]);
+            // Debug.Assert(target != null, "Targeted non-enemy!", targetsBuffer[0]);
             return true;
         }
         target = null;

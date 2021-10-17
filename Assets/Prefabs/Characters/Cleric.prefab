@@ -275,23 +275,48 @@ MonoBehaviour:
   speed: 8
   healthUI: {fileID: 0}
   cam: {fileID: 0}
+  movementEnabled: 1
   maxHealth: 3
   invulnerableTime: 1
+  invulnerable: 0
   dead: 0
   inventory: []
   maxInventorySize: 4
   anim: {fileID: 447926434659193251}
   bulletPrefab: {fileID: 2360140960579628105, guid: 9e8e368e2d6b6c247ad09b3b0ac41721, type: 3}
   firePoint: {fileID: 447926435138224468}
-  audiosource: {fileID: 447926434659193248}
   shootForce: 20
   shotCooldown: 0.25
   shootEffect: {fileID: 6510926693004658374, guid: 6b602afe8bf3a7349b29c1e20981defb, type: 3}
   readyToShoot: 1
-  spell: {fileID: 2848715371038032305, guid: e60c25b3a7ef7e7439ba2326cce1b159, type: 3}
-  rechargeTime: 3.5
-  distanceAdjustment: 4
-  spellSpawnLocation: {x: 0, y: 3, z: 0}
+  rb: {fileID: 0}
+  canDodge: 0
+  invulnerableDuration: 0.5
+  dodgeCoolDown: 1
+  moveAmount: 3
+  audiosource: {fileID: 447926434659193248}
+  shootVolume: 0
+  shootSound: {fileID: 0}
+  footstepVolume: 0.5
+  footsteps:
+  - {fileID: 8300000, guid: e35e8ea13d19e2a4dafd3cff1f6e7dbe, type: 3}
+  - {fileID: 8300000, guid: 17d5716e96bce67448d2c07ad5e8f70c, type: 3}
+  - {fileID: 8300000, guid: f46701d92068e6542b8ea7c312e70491, type: 3}
+  - {fileID: 8300000, guid: cf56cc7c3ce9e934e96852ca0aeb7199, type: 3}
+  - {fileID: 8300000, guid: 8d7023c14237ac94fa31712eb83700aa, type: 3}
+  - {fileID: 8300000, guid: d64db5c0afcf37548846ff0b7dfa00bd, type: 3}
+  - {fileID: 8300000, guid: 627eaeb65a9cc6445a6e78ffa440a995, type: 3}
+  - {fileID: 8300000, guid: 05b161386c0bfc646a1dd9b3ba07d8e0, type: 3}
+  - {fileID: 8300000, guid: 1615a399728e8af438f9a330d2c0f13a, type: 3}
+  delayBetweenSteps: 0.4
+  numberToShoot: 10
+  castEffect: {fileID: 6646383910957335551, guid: 4d01c070cd95d7c48aaa4a71161ac47e, type: 3}
+  projectile: {fileID: 2848715371038032305, guid: e60c25b3a7ef7e7439ba2326cce1b159, type: 3}
+  castTime: 0.5
+  rechargeTime: 8
+  heavyForce: 15
+  clipvolume: 0.5
+  heavySound: {fileID: 8300000, guid: 5a9772dffc02bc945b4a50ff72e6b52d, type: 3}
 --- !u!1 &816391301417356855
 GameObject:
   m_ObjectHideFlags: 0
