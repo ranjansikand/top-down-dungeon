@@ -11,6 +11,10 @@ public class Cleric : PlayerBase
     [SerializeField, Range(0f, 1f)] float clipvolume;
     [SerializeField] AudioClip heavySound;
 
+    [SerializeField] float blastRadius, explosionForce;
+    [SerializeField] LayerMask enemyLayer;
+    [SerializeField] GameObject burst;
+
 
     bool readyToCast = true;
 
@@ -25,6 +29,7 @@ public class Cleric : PlayerBase
 
         if (Input.GetMouseButtonDown(1) && !dead && readyToCast)
         {
+            Instantiate(castEffect, transform.position+new Vector3(0, 0.35f, 0), new Quaternion(0.707106829f,0,0,0.707106829f));
             readyToCast = false;
             anim.SetBool("Walk", false);
             anim.SetTrigger("Heavy");
@@ -35,16 +40,16 @@ public class Cleric : PlayerBase
     {
         movementEnabled = false;
 
-        Instantiate(castEffect, transform.position+new Vector3(0, 0.35f, 0), new Quaternion(0.707106829f,0,0,0.707106829f));
-
+        if (burst != null) Instantiate(burst, transform.position+new Vector3(0, 0.35f, 0), new Quaternion(0.707106829f,0,0,0.707106829f));
         if (heavySound != null) audiosource.PlayOneShot(heavySound, clipvolume); 
 
-        for (int i = 0; i < numberToShoot; i++)
+        Collider[] enemies = Physics.OverlapSphere(transform.position, blastRadius, enemyLayer);
+        for (int i = 0; i < enemies.Length; i++) 
         {
-            Vector3 randomDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(0f, 1f), Random.Range(-1f, 1f));
+            enemies[i].gameObject.GetComponent<EnemyScript>().Hurt();
 
-            GameObject bullet = Instantiate(projectile, transform.position + Vector3.up, transform.rotation);
-            bullet.GetComponent<Rigidbody>().AddForce(heavyForce * randomDirection, ForceMode.Impulse);
+            Rigidbody en_rb = enemies[i].GetComponent<Rigidbody>();
+            if (en_rb != null) en_rb.AddExplosionForce(explosionForce, transform.position, blastRadius, 0f, ForceMode.Impulse);
         }
 
         Invoke(nameof(ResetMovement), castTime);
@@ -53,6 +58,7 @@ public class Cleric : PlayerBase
 
     void ResetMovement()
     {
+        
         movementEnabled = true;
     }
 

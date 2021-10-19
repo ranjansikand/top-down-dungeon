@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBase : MonoBehaviour
 {
@@ -27,7 +28,9 @@ public class PlayerBase : MonoBehaviour
     [Header("Inventory")]
 
     [SerializeField] List<GameObject> inventory = new List<GameObject>();
+    [SerializeField] List<Sprite> inventoryImages = new List<Sprite>();
     [SerializeField] int maxInventorySize = 4;
+    [SerializeField] Image display;
 
     int key = -1;
 
@@ -35,7 +38,6 @@ public class PlayerBase : MonoBehaviour
     [Header("Animation")]
 
     public Animator anim;
-    [SerializeField] Transform aimPoint;
 
 
     [Header("Shooting")]
@@ -120,12 +122,9 @@ public class PlayerBase : MonoBehaviour
             anim.ResetTrigger("Roll");
             DodgeRoll();
         }
-    }
 
-    void OnAnimatorIK()
-    {
-        anim.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
-        anim.SetIKPosition(AvatarIKGoal.RightHand, aimPoint.position);
+        // inventory
+        if (Input.GetKeyDown("1") && inventory.Count > 0) UseItem(key);
     }
 
 
@@ -187,13 +186,14 @@ public class PlayerBase : MonoBehaviour
     }
 
     // various inventory functions
-    public bool AddToInventory(GameObject item)
+    public bool AddToInventory(GameObject item, Sprite itemImage)
     {
         if (inventory.Count < maxInventorySize)
         {
             inventory.Add(item);
+            inventoryImages.Add(itemImage);
 
-            if (key == -1) key = 0;
+            if (key == -1) ChangeActiveItem(0);
 
             return true;
         }
@@ -205,7 +205,7 @@ public class PlayerBase : MonoBehaviour
         if (key != -1) 
         {
             // added code to make items loop
-            if (direction > 0)
+            if (direction == 1)
             {
                 if (key < inventory.Count) key++;
                 else key = 0;
@@ -216,6 +216,12 @@ public class PlayerBase : MonoBehaviour
                 else key = inventory.Count - 1;
             }
         }
+        else {
+            key = 0;
+        }
+
+        // update in UI
+        display.sprite = inventoryImages[key];
     }
 
     public GameObject ActiveItem()
@@ -225,7 +231,15 @@ public class PlayerBase : MonoBehaviour
 
     public void UseItem(int index)
     {
+        if (key == -1) return;
+
+        // spawn item
+        GameObject item = Instantiate(inventory[index], transform.position + new Vector3(0, 3, 0), transform.rotation);
         inventory.RemoveAt(index);
+        // change UI image
+        inventoryImages.RemoveAt(index);
+        if (inventoryImages.Count == 0) display.sprite = null;
+        else ChangeActiveItem(1);
     }
 
     // combat
@@ -235,7 +249,6 @@ public class PlayerBase : MonoBehaviour
         readyToShoot = false;
 
         if (shootEffect != null) Instantiate(shootEffect, firePoint.position, firePoint.rotation);
-
         if (shootSound != null) audiosource.PlayOneShot(shootSound, shootVolume);
         
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

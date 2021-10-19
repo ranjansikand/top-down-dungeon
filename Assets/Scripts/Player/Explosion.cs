@@ -58,4 +58,16 @@ public class Explosion : MonoBehaviour
     {
         Explode();
     }
+
+    public void GenerateExplosion(Vector3 epicenter, float blastRadius)
+    {
+        Collider[] enemies = Physics.OverlapSphere(epicenter, blastRadius, enemyLayer);
+        for (int i = 0; i < enemies.Length; i++) 
+        {
+            enemies[i].gameObject.GetComponent<EnemyScript>().Hurt();
+
+            Rigidbody en_rb = enemies[i].GetComponent<Rigidbody>();
+            if (en_rb != null) en_rb.AddExplosionForce(explosionForce, epicenter, blastRadius, 0f, ForceMode.Impulse);
+        }
+    }
 }

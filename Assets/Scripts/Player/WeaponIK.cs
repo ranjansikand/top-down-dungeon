@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class WeaponIK : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Transform followPoint;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // stick to point
+       transform.position = followPoint.position;
     }
 }
