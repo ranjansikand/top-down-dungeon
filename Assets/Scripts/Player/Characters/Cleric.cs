@@ -46,7 +46,7 @@ public class Cleric : PlayerBase
         Collider[] enemies = Physics.OverlapSphere(transform.position, blastRadius, enemyLayer);
         for (int i = 0; i < enemies.Length; i++) 
         {
-            enemies[i].gameObject.GetComponent<EnemyScript>().Hurt();
+            if (enemies[i].gameObject.GetComponent<EnemyScript>() != null) enemies[i].gameObject.GetComponent<EnemyScript>().Hurt();
 
             Rigidbody en_rb = enemies[i].GetComponent<Rigidbody>();
             if (en_rb != null) en_rb.AddExplosionForce(explosionForce, transform.position, blastRadius, 0f, ForceMode.Impulse);

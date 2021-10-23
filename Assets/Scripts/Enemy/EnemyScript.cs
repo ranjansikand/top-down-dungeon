@@ -8,7 +8,7 @@ public class EnemyScript : MonoBehaviour
     [Header("Initialization variables")]
 
     [SerializeField] NavMeshAgent agent;
-    [SerializeField, Range(0f, 25f)] float speed;
+    [Range(0f, 25f)] public float speed;
     public int health;
     [SerializeField] bool takeBulletDamage = true;
 
@@ -46,7 +46,7 @@ public class EnemyScript : MonoBehaviour
  
     [Header("Sound Effects")]
 
-    [SerializeField] AudioSource audiosource;
+    public AudioSource audiosource;
     [SerializeField] AudioClip detectionSound, hurtSound, deathSound, attackSound;
     [SerializeField] float detectionSoundVolume, hurtSoundVolume,deathSoundVolume, attackSoundVolume;
 
@@ -97,11 +97,16 @@ public class EnemyScript : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
-    public void StopChasing()
+    public void StopChasing(bool save)
     {
-        player = null;
+        if (!save) player = null;
         agent.SetDestination(transform.position);
         
+    }
+
+    public void GoTo(Vector3 destination)
+    {
+        agent.SetDestination(destination);
     }
 
     void SetPatrolDestination()

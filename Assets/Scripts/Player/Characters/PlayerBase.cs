@@ -77,6 +77,7 @@ public class PlayerBase : MonoBehaviour
     {
         if (healthUI == null) healthUI = GameObject.Find("Health"); 
         if (cam == null) cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        if (display == null) display = GameObject.Find("CurrentItem").GetComponent<Image>();
 
         health = maxHealth;
         healthUI.GetComponent<Health>().SetUpHearts(maxHealth);
@@ -159,7 +160,7 @@ public class PlayerBase : MonoBehaviour
     // various health functions
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.layer == 6 && !invulnerable) 
+        if ((other.gameObject.layer == 6 || other.gameObject.layer == 7) && !invulnerable) 
         {
             Debug.Log("Hurt");
             invulnerable = true;
@@ -177,6 +178,15 @@ public class PlayerBase : MonoBehaviour
         speed = 0;
         if (anim) anim.SetTrigger("Death");
         // GetComponent<PlayerShooting>().Death();
+    }
+
+    public void TakeDamage()
+    {
+        Debug.Log("Hurt");
+        invulnerable = true;
+        health--;
+        healthUI.GetComponent<Health>().DecreaseHealth();
+        Invoke("ResetAfterDamage", invulnerableTime);
     }
 
     public void Heal()
@@ -233,6 +243,8 @@ public class PlayerBase : MonoBehaviour
     {
         if (key == -1) return;
 
+        // trigger animation
+        if (anim != null) anim.SetTrigger("Throw");
         // spawn item
         GameObject item = Instantiate(inventory[index], transform.position + new Vector3(0, 3, 0), transform.rotation);
         inventory.RemoveAt(index);

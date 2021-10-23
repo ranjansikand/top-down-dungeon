@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7700396915735738269}
   - component: {fileID: 4008920212833266393}
   - component: {fileID: 208019271167548018}
-  m_Layer: 10
+  m_Layer: 1
   m_Name: Thumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,11 +234,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_Name
@@ -246,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_RootOrder

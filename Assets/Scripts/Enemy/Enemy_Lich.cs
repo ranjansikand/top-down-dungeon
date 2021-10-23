@@ -54,7 +54,7 @@ public class Enemy_Lich : EnemyScript
         if (distance < attackRange)
         {
             cooldown = true;
-            StopChasing();
+            StopChasing(false);
 
             if (Random.Range(1, 4) == 2)
             {
@@ -103,7 +103,7 @@ public class Enemy_Lich : EnemyScript
     void Die()
     {
         deathSequenceBegan = true;
-        StopChasing();
+        StopChasing(false);
         anim.SetTrigger("Die");
         Invoke("Death", 2.5f);
     }

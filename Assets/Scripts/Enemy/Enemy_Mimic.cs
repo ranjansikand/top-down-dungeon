@@ -21,7 +21,7 @@ public class Enemy_Mimic : EnemyScript
             if (health <= 0)
             {
                 deathSequenceBegan = true;
-                StopChasing();
+                StopChasing(false);
                 anim.SetTrigger("Die");
                 Invoke("Death", 1.5f);
             }

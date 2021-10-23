@@ -18,7 +18,7 @@ public class Enemy_Standard : EnemyScript
             if (health <= 0)
             {
                 deathSequenceBegan = true;
-                StopChasing();
+                StopChasing(false);
                 anim.SetTrigger("Die");
                 Invoke("Death", 1.5f);
             }
