@@ -26,8 +26,6 @@ public class HomingAttack : MonoBehaviour
         Collider[] enemies = Physics.OverlapSphere(transform.position, detectionRadius, layerMask);
 
         if (enemies.Length > 0) target = enemies[0].gameObject.transform;
-
-        Debug.Log("Detected: " + target);
     }
 
     void OnCollisionEnter()

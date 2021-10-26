@@ -148,5 +148,4 @@ MonoBehaviour:
   maxLifetime: 6
   useDestroyEffect: 1
   destroyEffect: {fileID: 1462327970484030, guid: f01c1eba69de19e44b04d8d651aaac37, type: 3}
-  invulnerableTime: 2
-  pinTime: 1
+  invulnerableTime: 3

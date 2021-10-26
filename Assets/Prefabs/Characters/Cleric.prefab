@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 8624173995106073252}
   - component: {fileID: 2199078628591661084}
   - component: {fileID: 2199078628591661085}
+  - component: {fileID: 2763296583484515631}
   m_Layer: 9
   m_Name: Cleric
   m_TagString: Player
@@ -529,6 +530,14 @@ MonoBehaviour:
   - m_Rig: {fileID: 2199078629251339624}
     m_Active: 1
   m_Effectors: []
+--- !u!81 &2763296583484515631
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473382094478321455}
+  m_Enabled: 1
 --- !u!1 &1571991345585914300
 GameObject:
   m_ObjectHideFlags: 0

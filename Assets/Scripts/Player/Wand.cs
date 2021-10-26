@@ -8,7 +8,7 @@ public class Wand : MonoBehaviour
 
     void Awake()
     {
-        if (cam == null) cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        if (cam == null) cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     void Update()

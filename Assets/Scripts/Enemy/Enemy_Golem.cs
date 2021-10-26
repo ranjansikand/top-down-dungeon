@@ -19,6 +19,7 @@ public class Enemy_Golem : EnemyScript
 
     [Header("Sounds")]
 
+    [SerializeField] AudioSource additionalSource;
     [SerializeField] float volume;
     [SerializeField] AudioClip roar;
     [SerializeField] AudioClip[] grunts;
@@ -66,7 +67,7 @@ public class Enemy_Golem : EnemyScript
         {
             anim.SetTrigger("Detected");
             audiosource.PlayOneShot(roar, volume);
-            Invoke(nameof(Detection), 1.5f);
+            Invoke(nameof(Detection), 2.5f);
             return;
         }
 
@@ -102,7 +103,6 @@ public class Enemy_Golem : EnemyScript
         currentRock = Instantiate(rock, rightHand.position, rightHand.rotation);
         currentRock.GetComponent<Rock>().SetPin(rightHand);
 
-        //audiosource.PlayOneShot(grunts[Random.Range(0, grunts.Length)], volume);
         anim.SetTrigger("Throw");
 
         Invoke(nameof(EndAttack), throwDelay);
@@ -110,6 +110,7 @@ public class Enemy_Golem : EnemyScript
 
     void ReleaseRock()
     {
+        additionalSource.PlayOneShot(grunts[Random.Range(0, grunts.Length)], volume);
         currentRock.GetComponent<Rock>().RemovePin();
         currentRock.GetComponent<Rigidbody>().AddForce(throwForce * transform.forward, ForceMode.Impulse);
     }

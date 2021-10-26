@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Rock : Bullet
 {
-    [SerializeField] float pinTime;
     Transform pinTo;
 
     public void SetPin(Transform item)
