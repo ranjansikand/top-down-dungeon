@@ -16,23 +16,26 @@ public class Monk : PlayerBase
 
     void Update()
     {
-        if (canPunch && Input.GetKeyDown(KeyCode.RightShift))
+        if (!dead)
         {
-            canPunch = false;
-            if (particleEffect != null) Instantiate(particleEffect, punchPoint.position, Quaternion.identity);
-            if (attackType % 2 == 1) {
-                anim.SetTrigger("Punch1");
+            if (canPunch && Input.GetKeyDown(KeyCode.RightShift))
+            {
+                canPunch = false;
+                if (particleEffect != null) Instantiate(particleEffect, punchPoint.position, Quaternion.identity);
+                if (attackType % 2 == 1) {
+                    anim.SetTrigger("Punch1");
+                }
+                else {
+                    anim.SetTrigger("Punch2");
+                }
+                attackType++;
             }
-            else {
-                anim.SetTrigger("Punch2");
-            }
-            attackType++;
-        }
 
-        if (Input.GetMouseButtonDown(0) && readyToShoot)
-        {
-            anim.SetTrigger("Punch1");
-            Invoke("Shoot", 0.15f);
+            if (Input.GetMouseButtonDown(0) && readyToShoot)
+            {
+                anim.SetTrigger("Punch1");
+                Invoke("Shoot", 0.15f);
+            }
         }
     }
 

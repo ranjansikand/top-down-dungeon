@@ -48,96 +48,106 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Player\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Player\Wand.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazeRoomSettings.cs" />
-     <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\Environments\Crystal_Mine\Spline_Tool\Scripts\Mesh_Maker.cs" />
      <Compile Include="Assets\Imports\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\Environments\Crystal_Mine\Spline_Tool\Scripts\Path_Comp.cs" />
      <Compile Include="Assets\Scripts\Player\Characters\Ranger.cs" />
-     <Compile Include="Assets\Scripts\Player\HomingAttack.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\DungeonCreator.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Boss_Bull.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\DungeonCreator.cs" />
+     <Compile Include="Assets\Environments\Crystal_Mine\Spline_Tool\Scripts\Math_Functions.cs" />
      <Compile Include="Assets\Scripts\Player\Characters\Monk.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Lich.cs" />
-     <Compile Include="Assets\Scripts\Player\Characters\PlayerBase.cs" />
      <Compile Include="Assets\Scripts\Player\Characters\Necromancer.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazeWall.cs" />
      <Compile Include="Assets\Imports\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazeCellEdge.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\DungeonGenerator.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazeCellEdge.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\DungeonGenerator.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Slime.cs" />
-     <Compile Include="Assets\Scripts\Player\Characters\Cleric.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazePassage.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\RoomGenerator.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\RoomGenerator.cs" />
+     <Compile Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus.cs" />
      <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets\Scripts\Player\Characters\Wizard.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazeDoor.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\Node.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\RoomNode.cs" />
-     <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\Maze.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\Node.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\RoomNode.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\Maze.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Standard.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMelee.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\IntVector2.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\IntVector2.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyProjectile.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Mimic.cs" />
      <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
-     <Compile Include="Assets\Scripts\Player\Familiar_Skeleton.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazeRoom.cs" />
-     <Compile Include="Assets\Scripts\Player\Health.cs" />
      <Compile Include="Assets\Scripts\Player\WeaponIK.cs" />
+     <Compile Include="Assets\Imports\Ultimate 10 Plus Shaders\Scripts\U10PS_DissolveOverTime.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Enemy_Golem.cs" />
+     <Compile Include="Assets\Imports\Ultimate 10 Plus Shaders\Scripts\U10PS_ExampleReview.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\Pyromancer.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\StructureHelper.cs" />
+     <Compile Include="Assets\Scripts\Player\Health_Heart.cs" />
+     <Compile Include="Assets\Imports\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets\Scripts\Player\Wand.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazeRoomSettings.cs" />
+     <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\Imports\Ultimate 10 Plus Shaders\Scripts\U10PS_MouseRotation.cs" />
+     <Compile Include="Assets\Scripts\Player\HomingAttack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyScript.cs" />
+     <Compile Include="Assets\Environments\Crystal_Mine\Spline_Tool\Scripts\Trail_Mesh.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\PlayerBase.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazeWall.cs" />
+     <Compile Include="Assets\Scripts\Player\Characters\Cleric.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazePassage.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Rock.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazeDoor.cs" />
+     <Compile Include="Assets\Scripts\Billboard.cs" />
+     <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets\Scripts\Player\Familiar_Skeleton.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazeRoom.cs" />
+     <Compile Include="Assets\Scripts\Player\Health.cs" />
      <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\Imports\Ultimate 10 Plus Shaders\Scripts\U10PS_SnowOverTime.cs" />
      <Compile Include="Assets\Scripts\Player\Explosion.cs" />
      <Compile Include="Assets\Scripts\Player\CameraScript.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazeDirection.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazeDirection.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Imports\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\MazeCell.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\BinarySpacePartitioner.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\MazeCell.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\BinarySpacePartitioner.cs" />
      <Compile Include="Assets\Scripts\Player\Items\DisplayInventory.cs" />
-     <Compile Include="Assets\Scripts\Player\Characters\Pyromancer.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Slime.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\StructureHelper.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
-     <Compile Include="Assets\Scripts\Player\Health_Heart.cs" />
      <Compile Include="Assets\Imports\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
-     <Compile Include="Assets\Imports\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\Scripts\Player\Items\Item.cs" />
-     <Compile Include="Assets\DungeonGenerator\Scripts\Line.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Scripts\Line.cs" />
      <Compile Include="Assets\Scripts\Player\ExplosionTest.cs" />
-     <Compile Include="Assets\DungeonGenerator\Maze Generator\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Ultimate 10 Plus Shaders\Scripts\U10PS_MouseRotation.cs" />
-     <Compile Include="Assets\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus.cs" />
-     <Compile Include="Assets\Ultimate 10 Plus Shaders\Scripts\U10PS_SnowOverTime.cs" />
-     <Compile Include="Assets\Ultimate 10 Plus Shaders\Scripts\U10PS_DissolveOverTime.cs" />
-     <Compile Include="Assets\Ultimate 10 Plus Shaders\Scripts\U10PS_ExampleReview.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Boss_Bull.cs" />
+     <Compile Include="Assets\Environments\DungeonGenerator\Maze Generator\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\Button.cs" />
      <None Include="Assets\Imports\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Edge Detection.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Grass Sway.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Blur.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Edge Detection.shader" />
+     <None Include="Assets\Environments\Crystal_Mine\Spline_Tool\Scripts\LICENSE.txt" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Grass Sway.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Blur.shader" />
      <None Include="Assets\Imports\Simple Toon\Shaders\STOutline.shader" />
      <None Include="Assets\Imports\Cartoon FX\CartoonFX Free.txt" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus.compute" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Depth Mask Edge Detection.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus.compute" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Depth Mask Edge Detection.shader" />
      <None Include="Assets\Imports\Simple Toon\Shaders\STTransparent.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Ocean.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Dissolve.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Plasma.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Ocean.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Dissolve.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Plasma.shader" />
      <None Include="Assets\Imports\Simple Toon\Shaders\STCore.cginc" />
-     <None Include="Assets\Imports\Boss-Bull\Bull\Shader\Cartoon.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Outline.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus Line.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Snow.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Lava3D.shader" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Force Field.shader" />
+     <None Include="Assets\Imports\Boss\Bull\Shader\Cartoon.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Outline.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Plexus\Plexus Line.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Snow.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Lava3D.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Force Field.shader" />
      <None Include="Assets\Imports\Equipment\Grimoire\ReadMe.txt" />
      <None Include="Assets\Imports\Simple Toon\Shaders\STDefault.shader" />
      <None Include="Assets\Imports\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets\Imports\Equipment\Hats\README.txt" />
      <None Include="Assets\Imports\Simple Toon\Shaders\STFunctions.cginc" />
-     <None Include="Assets\Ultimate 10 Plus Shaders\Shaders\Simple Sine Wave.shader" />
+     <None Include="Assets\Imports\Ultimate 10 Plus Shaders\Shaders\Simple Sine Wave.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -711,6 +721,9 @@
  <Reference Include="Unity.2D.Animation.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VisualEffectGraph.Editor">
+ <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
@@ -723,6 +736,9 @@
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VisualEffectGraph.Runtime">
+ <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
@@ -731,6 +747,9 @@
  </Reference>
  <Reference Include="Unity.Burst.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Searcher.Editor">
+ <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.IK.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
@@ -750,8 +769,14 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+ <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Animation.Rigging">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
@@ -761,6 +786,9 @@
  </Reference>
  <Reference Include="Unity.2D.IK.Runtime">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
@@ -777,6 +805,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
@@ -789,29 +820,8 @@
  <Reference Include="Unity.Animation.Rigging.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.VisualEffectGraph.Editor">
- <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualEffectGraph.Runtime">
- <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Searcher.Editor">
- <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
  <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/ranja/Desktop/Games/TDS_WithSprites/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

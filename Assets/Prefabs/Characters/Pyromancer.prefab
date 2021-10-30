@@ -383,29 +383,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a250765abc73434a97dbae82386ab89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 412945696798207340}
   speed: 7
-  healthUI: {fileID: 0}
+  rayDistance: 0.65
   cam: {fileID: 0}
   movementEnabled: 1
+  healthUI: {fileID: 0}
   maxHealth: 1
   invulnerableTime: 1
   invulnerable: 0
   dead: 0
   inventory: []
+  inventoryImages: []
   maxInventorySize: 4
+  display: {fileID: 0}
   anim: {fileID: 412945696798207342}
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 412945695613646434}
-  audiosource: {fileID: 518724270108709094}
   shootForce: 0
   shotCooldown: 0.25
   shootEffect: {fileID: 0}
   readyToShoot: 1
-  rb: {fileID: 412945696798207340}
   canDodge: 1
   invulnerableDuration: 0.5
   dodgeCoolDown: 1
   moveAmount: 3
+  audiosource: {fileID: 518724270108709094}
+  footSource: {fileID: 0}
+  shootVolume: 0
+  shootSound: {fileID: 0}
+  footstepVolume: 0
+  footsteps: []
+  delayBetweenSteps: 0
   fireBall: {fileID: 3421862046850362978, guid: 7de2bb0c47ece56439c77c35bb32d40e, type: 3}
   maxFireBalls: 5
   spread: 0.5

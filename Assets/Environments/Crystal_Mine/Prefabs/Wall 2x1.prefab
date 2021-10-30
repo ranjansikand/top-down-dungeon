@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4143745398852390}
   - component: {fileID: 33345244235588348}
   - component: {fileID: 1002854238870577229}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Group63213
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 4227249675933410}
   - component: {fileID: 33221412777950236}
   - component: {fileID: 23504381448471644}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Group63211
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4323185638226614}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Wall 2x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

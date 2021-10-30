@@ -17,22 +17,25 @@ public class Wizard : PlayerBase
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !dead && readyToShoot) 
+        if (!dead)
         {
-            readyToShoot = false;
-            anim.SetBool("Walk", false);
-            anim.SetTrigger("Attack");
+            if (Input.GetMouseButtonDown(0) && !dead && readyToShoot) 
+            {
+                readyToShoot = false;
+                anim.SetBool("Walk", false);
+                anim.SetTrigger("Attack");
 
-            if (lightAttackClip != null) audiosource.PlayOneShot(lightAttackClip, audioVolume);
-        }
+                if (lightAttackClip != null) audiosource.PlayOneShot(lightAttackClip, audioVolume);
+            }
 
-        if (Input.GetMouseButtonDown(1) && !dead && canCast)
-        {
-            canCast = false;
-            anim.SetBool("Walk", false);
-            anim.SetTrigger("Heavy");
+            if (Input.GetMouseButtonDown(1) && !dead && canCast)
+            {
+                canCast = false;
+                anim.SetBool("Walk", false);
+                anim.SetTrigger("Heavy");
 
-            if (heavyAttackClip != null) audiosource.PlayOneShot(heavyAttackClip, audioVolume);
+                if (heavyAttackClip != null) audiosource.PlayOneShot(heavyAttackClip, audioVolume);
+            }
         }
     }
 

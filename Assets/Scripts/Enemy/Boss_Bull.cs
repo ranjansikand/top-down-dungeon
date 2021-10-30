@@ -187,8 +187,7 @@ public class Boss_Bull : EnemyScript
         if (useSound) audiosource.PlayOneShot(chargeSound, chargeVolume);
         speed = chargeSpeed;
 
-        targetDestination = player.position;
-        GoTo(targetDestination);
+        GoTo(player.position);
     }
 
     void DropProjectiles()

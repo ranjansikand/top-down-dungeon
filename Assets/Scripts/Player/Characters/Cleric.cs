@@ -20,19 +20,22 @@ public class Cleric : PlayerBase
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !dead && readyToShoot) 
+        if (!dead)
         {
-            readyToShoot = false;
-            anim.SetBool("Walk", false);
-            anim.SetTrigger("Attack");
-        }
+            if (Input.GetMouseButtonDown(0) && !dead && readyToShoot) 
+            {
+                readyToShoot = false;
+                anim.SetBool("Walk", false);
+                anim.SetTrigger("Attack");
+            }
 
-        if (Input.GetMouseButtonDown(1) && !dead && readyToCast)
-        {
-            Instantiate(castEffect, transform.position+new Vector3(0, 0.35f, 0), new Quaternion(0.707106829f,0,0,0.707106829f));
-            readyToCast = false;
-            anim.SetBool("Walk", false);
-            anim.SetTrigger("Heavy");
+            if (Input.GetMouseButtonDown(1) && !dead && readyToCast)
+            {
+                Instantiate(castEffect, transform.position+new Vector3(0, 0.35f, 0), new Quaternion(0.707106829f,0,0,0.707106829f));
+                readyToCast = false;
+                anim.SetBool("Walk", false);
+                anim.SetTrigger("Heavy");
+            }
         }
     }
 

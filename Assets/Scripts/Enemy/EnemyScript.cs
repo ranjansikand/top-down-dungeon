@@ -2,12 +2,13 @@
 
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
     [Header("Initialization variables")]
 
-    [SerializeField] NavMeshAgent agent;
+    public NavMeshAgent agent;
     [Range(0f, 25f)] public float speed;
     public int health;
     [SerializeField] bool takeBulletDamage = true;
@@ -26,6 +27,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] float patrolRadius;
     [SerializeField] float waitTime;
     [SerializeField] LayerMask groundLayer;
+
     Vector3 patrolDestination;
     bool patrolDestinationSet;
 
@@ -51,7 +53,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] float detectionSoundVolume, hurtSoundVolume,deathSoundVolume, attackSoundVolume;
 
  
-    [Header("Other effects")]
+    [Header("Particle Effects")]
 
     [SerializeField] GameObject detectedEffect;
     [SerializeField] GameObject attackingEffect;
@@ -59,9 +61,19 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] GameObject deathEffect;
 
 
+    [Header("Health Bar")]
+
+    [SerializeField] bool useHealthBar;
+    [SerializeField] Image healthBar;
+
+    int startingHealth = -1;
+
+
     void Awake()
     {
         agent.speed = speed;
+
+        if (useHealthBar) UpdateBar();
     }
 
     // BEGIN ENEMY FUNCTIONS
@@ -179,6 +191,7 @@ public class EnemyScript : MonoBehaviour
     public void Hurt()
     {
         health--;
+        if (useHealthBar) UpdateBar();
 
         if (health > 0)
         {
@@ -200,5 +213,14 @@ public class EnemyScript : MonoBehaviour
         if (deathSound != null) audiosource.PlayOneShot(deathSound, deathSoundVolume);
 
         Destroy(gameObject);
+    }
+
+    // health bar
+
+    void UpdateBar()
+    {
+        if (startingHealth == -1) startingHealth = health;
+
+        healthBar.fillAmount = 1.0f  * health / startingHealth;
     }
 }

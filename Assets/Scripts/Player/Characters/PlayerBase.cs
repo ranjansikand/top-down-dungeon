@@ -7,16 +7,20 @@ public class PlayerBase : MonoBehaviour
 {
     [Header("Movement variables")]
 
+    [SerializeField] Rigidbody rb;
     [Range(0f, 25f)] public float speed;
+    [SerializeField] float rayDistance = 0.65f;
 
-    [SerializeField] GameObject healthUI;
     [SerializeField] Camera cam;
 
     public bool movementEnabled = true;
 
+    int wallMask = 1 << 16;
+
 
     [Header("Health")]
 
+    [SerializeField] GameObject healthUI;
     [SerializeField] int maxHealth;
     [SerializeField] float invulnerableTime = 1f;
 
@@ -52,7 +56,6 @@ public class PlayerBase : MonoBehaviour
 
     [Header("Dodge Roll")]
 
-    [SerializeField] Rigidbody rb;
     [SerializeField] bool canDodge;
     [SerializeField] float invulnerableDuration = 0.5f, dodgeCoolDown = 1, moveAmount = 3;
 
@@ -62,6 +65,8 @@ public class PlayerBase : MonoBehaviour
     [Header("Sounds")]
 
     public AudioSource audiosource;
+    [Tooltip("Separate audio source for footstep sounds")]
+    [SerializeField] AudioSource footSource;
     [SerializeField, Range(0f, 1f)] float shootVolume;
     [SerializeField] AudioClip shootSound;
 
@@ -83,56 +88,44 @@ public class PlayerBase : MonoBehaviour
         healthUI.GetComponent<Health>().SetUpHearts(maxHealth);
 
         Cursor.visible = true;
+
+        DontDestroyOnLoad(this.gameObject);
     }
     
     void LateUpdate()
-    {   
-        // movement
-        if (movementEnabled) {
-            Vector2 playerInput;
+    {
+        if (!dead) {
+            if (health <= 0 && !dead) Death(); 
 
-            playerInput.x = Input.GetAxis("Horizontal");
-            playerInput.y = Input.GetAxis("Vertical");
-            playerInput.Normalize();
+            if (movementEnabled) {
+                Vector3 playerInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                playerInput.Normalize();
+                
+                 if (!Physics.Raycast(transform.position + Vector3.up, playerInput, rayDistance, wallMask)) {
+                    Vector3 displacement = playerInput * speed * Time.deltaTime;
+                    transform.position += displacement;
+                 }
 
-            Vector3 velocity = new Vector3(playerInput.x, 0f, playerInput.y) * speed;
-            Vector3 displacement = velocity * Time.deltaTime;
-
-            if (playerInput != Vector2.zero) RotatePlayer(playerInput);
-            transform.position += displacement;
-
-            // animation
-            if (anim != null)
-            {
-                if (playerInput != Vector2.zero) {
+                if (playerInput != Vector3.zero) {
                     if (anim.GetBool("Walk") == false) anim.SetBool("Walk", true);
-
                     if (footsteps.Length != 0 && betweenSteps) FootstepSounds();
+                    transform.forward = playerInput;  // rotates player to face input direction
                 }
                 else {
                     anim.SetBool("Walk", false);
                 }
             }
-        }  
         
-        if (health <= 0 && !dead) Death(); 
-
-        // dodge roll
-        if (canDodge && readyToDodge && Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.ResetTrigger("Roll");
-            DodgeRoll();
-        }
-
-        // inventory
-        if (Input.GetKeyDown("1") && inventory.Count > 0) UseItem(key);
-    }
-
-
-    // movement function to rotate player more naturally
-    void RotatePlayer(Vector2 input)
-    {
-        transform.forward = new Vector3(input.x, 0, input.y);
+            // dodge roll
+            if (canDodge && readyToDodge && Input.GetKeyDown(KeyCode.Space))
+            {
+                anim.ResetTrigger("Roll");
+                DodgeRoll();
+            }
+    
+            // inventory
+            if (Input.GetKeyDown("1") && inventory.Count > 0) UseItem(key);
+            }
     }
 
     void DodgeRoll()
@@ -162,11 +155,12 @@ public class PlayerBase : MonoBehaviour
     {
         if ((other.gameObject.layer == 6 || other.gameObject.layer == 7) && !invulnerable) 
         {
-            Debug.Log("Hurt");
-            invulnerable = true;
-            health--;
-            healthUI.GetComponent<Health>().DecreaseHealth();
-            Invoke("ResetAfterDamage", invulnerableTime); 
+            TakeDamage();
+        }
+
+        if (other.gameObject.layer == 16)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 
@@ -175,9 +169,9 @@ public class PlayerBase : MonoBehaviour
     void Death()
     {
         dead = true;
+        movementEnabled = false;
         speed = 0;
         if (anim) anim.SetTrigger("Death");
-        // GetComponent<PlayerShooting>().Death();
     }
 
     public void TakeDamage()
@@ -279,7 +273,7 @@ public class PlayerBase : MonoBehaviour
     void FootstepSounds()
     {
         betweenSteps = false;
-        audiosource.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)], footstepVolume);
+        footSource.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)], footstepVolume);
         Invoke(nameof(ResetSteps), delayBetweenSteps);
     }
 
