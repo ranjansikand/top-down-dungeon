@@ -58,10 +58,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9538833e7dd744ebf24d0f2798ac40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedDoor: {fileID: 6598964473636308444}
+  toggledButton: 0
+  doors:
+  - {fileID: 6598964473636308444}
   depressAmount: 0.2
   unlockDelay: 0.25
-  hasBeenPushed: 0
 --- !u!1 &6598964472822881105
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disappearEffect: {fileID: 9191387660491883135, guid: 3d990dded867e6b40adee6023d2cdd60, type: 3}
-  isLocked: 1
+  lockEffect: {fileID: 6342960385233508973, guid: 9e16267f3439c344cbdf5fdaadee0b5f, type: 3}
 --- !u!1 &6598964474020527859
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,11 +249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc667148b866fd24c9b4d7a7888db19d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 350
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc667148b866fd24c9b4d7a7888db19d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 350
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc667148b866fd24c9b4d7a7888db19d, type: 3}
       propertyPath: m_LocalScale.z
@@ -264,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc667148b866fd24c9b4d7a7888db19d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc667148b866fd24c9b4d7a7888db19d, type: 3}
       propertyPath: m_LocalPosition.z
