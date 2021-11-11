@@ -11,4 +11,4 @@ It was a great learning opportunity, and I have taken many things from this proj
 Some issues include the enemy AI, which was overly simplistic, and the character controller, which uses Unity's basic input system and a simple control method. The inventory
 is also a bit cumbersome and difficult to navigate.
 
-My current project rectifies these issues with an interactive inventory with an adaptive UI, and a hierarchal state machine to control character movement.
+My current project rectifies these issues with an interactive inventory with an adaptive UI and a hierarchal state machine to control character movement. I also utilized Unity's new Input System, which allows support for a variety of input devices. I've tested with KB+M as well as a DualShock 5 controller.
