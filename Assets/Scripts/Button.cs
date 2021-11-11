@@ -25,9 +25,14 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && toggledButton)
         {
-            hasBeenPushed = false;
-            transform.position += new Vector3(0, depressAmount, 0);
+            Invoke(nameof(ResetButton), 0.1f);
         }
+    }
+
+    void ResetButton()
+    {
+        hasBeenPushed = false;
+        transform.position += new Vector3(0, depressAmount, 0);
     }
 
     void Unlock()

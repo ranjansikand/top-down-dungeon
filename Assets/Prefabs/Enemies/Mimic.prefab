@@ -610,6 +610,8 @@ MonoBehaviour:
   attackingEffect: {fileID: 0}
   hurtEffect: {fileID: 0}
   deathEffect: {fileID: 0}
+  useHealthBar: 0
+  healthBar: {fileID: 0}
 --- !u!195 &4936536451984913167
 NavMeshAgent:
   m_ObjectHideFlags: 0

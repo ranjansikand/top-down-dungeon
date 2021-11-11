@@ -16,6 +16,9 @@ public class PlayerBase : MonoBehaviour
     public bool movementEnabled = true;
 
     int wallMask = 1 << 16;
+    int groundMask = 1 << 3;
+    Vector3 safeLocation;
+    float saveLocation = 3f;
 
 
     [Header("Health")]
@@ -125,7 +128,17 @@ public class PlayerBase : MonoBehaviour
     
             // inventory
             if (Input.GetKeyDown("1") && inventory.Count > 0) UseItem(key);
+
+            // save location in case of falls
+            if (saveLocation >= 0) saveLocation -= Time.deltaTime;
+            else if (Physics.Raycast(transform.position, Vector3.down, rayDistance, groundMask)) {
+                Debug.Log("Saved");
+                safeLocation = transform.position;
+                saveLocation = 3.0f;
             }
+
+            if (transform.position.y < -10) FallToDeath();
+        }
     }
 
     void DodgeRoll()
@@ -187,6 +200,16 @@ public class PlayerBase : MonoBehaviour
     {
         if (health < maxHealth) health++;
         healthUI.GetComponent<Health>().IncreaseHealth();
+    }
+
+    void FallToDeath()
+    {
+        TakeDamage();
+        if (health > 0) {
+            transform.position = safeLocation + Vector3.up;
+            saveLocation = 5.0f;
+        }
+        else Death();
     }
 
     // various inventory functions

@@ -1231,7 +1231,7 @@ Transform:
   m_GameObject: {fileID: 5113453108524880737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 114145193109653933}
   - {fileID: 3060444678122046247}
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5347966639878021330}
-  speed: 8
+  speed: 6.4
   rayDistance: 0.65
   cam: {fileID: 0}
   movementEnabled: 1
